@@ -6,8 +6,8 @@ metadata:
 spec:
   interval: 10m
   path: ./infrastructure/dev
-  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
   timeout: 5m
+  prune: true
