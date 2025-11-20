@@ -46,3 +46,8 @@ flux reconcile helmrelease istio-ingress -n flux-system
 # Watch Flux reconcile
 flux get kustomizations --watch
 ```
+
+## Istio Ingress Commands
+```bash
+kubectl get Gateway gateway-api -n istio-ingress
+```
