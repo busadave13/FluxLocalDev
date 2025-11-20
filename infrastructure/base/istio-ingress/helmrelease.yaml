@@ -24,5 +24,3 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  values: {}
-    # Use defaults - the chart handles everything
