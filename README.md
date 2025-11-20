@@ -20,4 +20,7 @@ flux bootstrap github \
   --path=./clusters/dev \
   --personal \
   --token-auth
+
+# Watch Flux reconcile
+flux get kustomizations --watch
 ```
