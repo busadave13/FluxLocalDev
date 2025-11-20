@@ -4,4 +4,4 @@ resources:
   - ../base
 
 patches:
-  - path: .patches/istio-ingress-patch.yaml
+  - path: ./patches/istio-ingress-patch.yaml
