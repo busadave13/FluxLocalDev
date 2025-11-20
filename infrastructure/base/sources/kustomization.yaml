@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - metrics-server-helm.yaml
   - istio-helm.yaml
+  - aspire-helm.yaml
