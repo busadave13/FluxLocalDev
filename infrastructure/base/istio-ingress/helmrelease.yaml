@@ -25,21 +25,24 @@ spec:
     remediation:
       retries: 3
   values:
+    # Number of replicas
+    replicaCount: 1
+    
+    # Service configuration
     service:
       type: LoadBalancer
       ports:
       - name: status-port
         port: 15021
-        protocol: TCP
         targetPort: 15021
       - name: http2
         port: 80
-        protocol: TCP
         targetPort: 80
       - name: https
         port: 443
-        protocol: TCP
         targetPort: 443
+    
+    # Resource limits
     resources:
       requests:
         cpu: 100m
@@ -47,6 +50,8 @@ spec:
       limits:
         cpu: 2000m
         memory: 1024Mi
+    
+    # Autoscaling
     autoscaling:
       enabled: true
       minReplicas: 1
