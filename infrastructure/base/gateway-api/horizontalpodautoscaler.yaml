@@ -2,14 +2,14 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: gateway-api-hpa
-  namespace: ingress
+  namespace: istio-ingress
 spec:
   # Match the generated Deployment by reference
   # Note: Do not use `kind: Gateway`.
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: "gateway-api-isio"
+    name: "gateway-api-istio"
   minReplicas: 2
   maxReplicas: 5
   metrics:
