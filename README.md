@@ -24,6 +24,8 @@ Get-Content $env:USERPROFILE\.ssh\flux-home-lab-deploy-key.pub
 ## Bootstrap docker-desktop cluster
 ```bash
 
+# Create a PAT on GitHub to bootstrap Flux
+
 # Bootstrap Flux to GitHub repo
 flux bootstrap github \
   --owner=busadave13 \
