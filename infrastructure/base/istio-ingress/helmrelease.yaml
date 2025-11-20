@@ -18,13 +18,14 @@ spec:
         name: istio
         namespace: flux-system
   install:
-    createNamespace: false
+    createNamespace: true
     remediation:
       retries: 3
   upgrade:
     remediation:
       retries: 3
   values:
+    # Namespace labels are managed by namespace.yaml in kustomization
     service:
       type: LoadBalancer
       ports:

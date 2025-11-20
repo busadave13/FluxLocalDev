@@ -31,6 +31,15 @@ flux bootstrap github \
   --branch=dev \
   --path=./clusters/dev \
   --private-key-file=$env:USERPROFILE\.ssh\flux-local-dev-deploy-key
+```
+
+## Flux Commands
+```bash
+# Check HelmRelease status
+kubectl get helmrelease istio-ingress -n flux-system
+
+# Reconcile specific HelmRelease
+flux reconcile helmrelease istio-ingress -n flux-system
 
 # Watch Flux reconcile
 flux get kustomizations --watch
