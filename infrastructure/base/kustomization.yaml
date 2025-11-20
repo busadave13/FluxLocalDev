@@ -4,4 +4,6 @@ resources:
   - sources
   - metrics-server
   - istio-base
+  - istiod
+  - istio-ingress
   - namespace
