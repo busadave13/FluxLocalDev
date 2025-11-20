@@ -17,7 +17,7 @@ flux bootstrap github \
   --owner=busadave13 \
   --repository=FluxLocalDev \
   --branch=dev \
-  --path=./clusters/docker-desktop \
+  --path=./clusters/dev \
   --personal \
   --token-auth
 ```
