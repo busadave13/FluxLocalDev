@@ -15,5 +15,6 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: prometheus
+        - name: prometheus-server
+          namespace: monitor
           port: 80
