@@ -1,0 +1,15 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: slack-alert
+spec:
+  providerRef:
+    name: slack # or slack-bot if using bot token
+  eventSeverity: info # Use 'error' for errors only
+  eventSources:
+    - kind: GitRepository
+      name: "*"
+    - kind: Kustomization
+      name: "*"
+    - kind: HelmRelease
+      name: "*"
