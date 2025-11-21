@@ -6,6 +6,6 @@ resources:
   - metrics-server
   - istio-base
   - istiod
-  - istio-ingress
+  #- istio-ingress
   - prometheus
   - aspire
