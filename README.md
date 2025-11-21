@@ -1,6 +1,15 @@
 # FluxLocalDev
 Git Repo for use with FluxCD for local Kubernetes environment setup
 
+
+## Host File 
+```bash
+127.0.0.1 prometheus.tools.com
+127.0.0.1 kiali.tools.com
+127.0.0.1 grafana.tools.com
+127.0.0.1 aspire.tools.com
+```
+
 ## Switch to Docker Desktop Kubernetes context
 ```bash
 # Verify your context
