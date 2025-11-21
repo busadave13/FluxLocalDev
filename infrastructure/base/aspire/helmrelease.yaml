@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: aspire
-  targetNamespace: aspire # Update this to match your desired namespace
+  targetNamespace: monitor
   chart:
     spec:
       chart: aspire-dashboard
@@ -16,24 +16,21 @@ spec:
         namespace: flux-system
   interval: 5m
   install:
-    createNamespace: true
+    createNamespace: false
     remediation:
       retries: 3
   upgrade:
     remediation:
       retries: 3
-  dependsOn:
-    - name: istio-ingress
-      namespace: flux-system
-  values:
-    # Add your custom values here
-    # Example values (check the chart's values.yaml for all options):
-    # replicaCount: 1
-    # image:
-    #   repository: mcr.microsoft.com/dotnet/aspire-dashboard
-    #   tag: "9.0"
-    # service:
-    #   type: ClusterIP
-    #   port: 18888
-    # ingress:
-    #   enabled: false
+  # values:
+  # Add your custom values here
+  # Example values (check the chart's values.yaml for all options):
+  # replicaCount: 1
+  # image:
+  #   repository: mcr.microsoft.com/dotnet/aspire-dashboard
+  #   tag: "9.0"
+  # service:
+  #   type: ClusterIP
+  #   port: 18888
+  # ingress:
+  #   enabled: false
