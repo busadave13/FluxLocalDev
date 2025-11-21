@@ -9,4 +9,5 @@ resources:
   - istiod
   #- istio-ingress
   - prometheus
+  - kiali
   - aspire

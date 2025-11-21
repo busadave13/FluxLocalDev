@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: prometheus
+  name: kiali
   namespace: flux-system
 spec:
-  releaseName: prometheus
+  releaseName: kiali
   targetNamespace: monitor
   chart:
     spec:
-      chart: prometheus
+      chart: kiali-server
       sourceRef:
         kind: HelmRepository
-        name: prometheus
+        name: kiali
         namespace: flux-system
   interval: 5m
   install:
