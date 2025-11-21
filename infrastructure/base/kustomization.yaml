@@ -7,5 +7,5 @@ resources:
   - istio-base
   - istiod
   #- istio-ingress
-  - prometheus
-  - aspire
+  #- prometheus
+  #- aspire

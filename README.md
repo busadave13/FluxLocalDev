@@ -45,6 +45,10 @@ flux reconcile helmrelease istio-ingress -n flux-system
 
 # Watch Flux reconcile
 flux get kustomizations --watch
+
+flux reconcile source git flux-system
+flux reconcile kustomization flux-system
+flux reconcile kustomization <kustomization-name> -n flux-system
 ```
 
 ## Istio Ingress Commands
