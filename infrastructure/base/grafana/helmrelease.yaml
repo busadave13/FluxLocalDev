@@ -24,10 +24,8 @@ spec:
   values:
     adminUser: admin
     adminPassword: admin
-
     service:
       port: 8080
-
     datasources:
       datasources.yaml:
         apiVersion: 1
@@ -40,18 +38,18 @@ spec:
             jsonData:
               timeInterval: "5s"
 
-    dashboardProviders:
-      dashboardproviders.yaml:
-        apiVersion: 1
-        providers:
-          - name: "istio"
-            orgId: 1
-            folder: "Istio Dashboards"
-            type: file
-            disableDeletion: false
-            editable: true
-            options:
-              path: /var/lib/grafana/dashboards/istio
+    # dashboardProviders:
+    #   dashboardproviders.yaml:
+    #     apiVersion: 1
+    #     providers:
+    #       - name: "istio"
+    #         orgId: 1
+    #         folder: "Istio Dashboards"
+    #         type: file
+    #         disableDeletion: false
+    #         editable: true
+    #         options:
+    #           path: /var/lib/grafana/dashboards/istio
 
-    dashboardsConfigMaps:
-      istio: "grafana-dashboard-istio"
+    # dashboardsConfigMaps:
+    #   istio: "grafana-dashboard-istio"
