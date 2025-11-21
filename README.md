@@ -2,6 +2,13 @@
 Git Repo for use with FluxCD for local Kubernetes environment setup
 
 
+## Create Slack Secret Manually
+``bash
+kubectl create secret generic slack-url \
+  --from-literal=address=https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK \
+  -n flux-system
+```
+
 ## Host File 
 ```bash
 127.0.0.1 prometheus.tools.com
