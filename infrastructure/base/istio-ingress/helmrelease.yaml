@@ -18,10 +18,12 @@ spec:
         name: istio
         namespace: flux-system
   install:
+    disableSchemaValidation: true
     createNamespace: true
     remediation:
       retries: 3
   upgrade:
+    disableSchemaValidation: true
     remediation:
       retries: 3
   values:
