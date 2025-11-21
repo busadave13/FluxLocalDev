@@ -21,3 +21,14 @@ spec:
   upgrade:
     remediation:
       retries: 3
+  values:
+    auth:
+      strategy: anonymous
+    server:
+      resources:
+        requests:
+          cpu: 100m
+          memory: 200Mi
+        limits:
+          cpu: 200m
+          memory: 400Mi
