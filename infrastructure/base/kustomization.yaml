@@ -7,7 +7,7 @@ resources:
   - metrics-server
   - istio-base
   - istiod
-  #- istio-ingress
   - prometheus
+  - grafana
   - kiali
   - aspire
