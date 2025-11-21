@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: kiali
-  targetNamespace: monitor
+  targetNamespace: istio-system
   chart:
     spec:
       chart: kiali-server
