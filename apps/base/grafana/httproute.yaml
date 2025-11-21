@@ -17,4 +17,4 @@ spec:
       backendRefs:
         - name: grafana
           namespace: monitor
-          port: 80
+          port: 8080
