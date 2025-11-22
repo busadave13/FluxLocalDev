@@ -4,7 +4,7 @@ metadata:
   name: mockery
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 2m
   targetNamespace: dev
   chart:
     spec:
