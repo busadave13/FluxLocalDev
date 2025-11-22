@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mockery
+  namespace: flux-system
+spec:
+  interval: 30m
+  targetNamespace: dev
+  chart:
+    spec:
+      chart: mockery
+      # version: "1.26.4"  # Commented out to use latest version
+      sourceRef:
+        kind: HelmRepository
+        name: github
+        namespace: flux-system
+  install:
+    createNamespace: false
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
