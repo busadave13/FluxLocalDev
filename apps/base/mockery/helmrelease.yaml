@@ -9,10 +9,10 @@ spec:
   chart:
     spec:
       chart: mockery
-      # version: "1.26.4"  # Commented out to use latest version
+      version: "*"
       sourceRef:
         kind: HelmRepository
-        name: github
+        name: ghcr-mockery
         namespace: flux-system
   install:
     createNamespace: false
