@@ -12,7 +12,7 @@ spec:
       version: "*"
       sourceRef:
         kind: HelmRepository
-        name: ghcr-mockery
+        name: github
         namespace: flux-system
   install:
     createNamespace: false
